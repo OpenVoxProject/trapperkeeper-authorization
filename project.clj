@@ -51,7 +51,7 @@
   ;; this plugin is used by jenkins jobs to interrogate the project version
   :plugins [[lein-parent "0.3.9"]
             [jonase/eastwood "1.2.2" :exclusions [org.clojure/clojure]]
-            [org.openvoxproject/i18n "0.9.2"]]
+            [org.openvoxproject/i18n "0.9.3-SNAPSHOT"]]
 
   :lein-release        {:scm          :git
                         :deploy-via   :lein-deploy}
