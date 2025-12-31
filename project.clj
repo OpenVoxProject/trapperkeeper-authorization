@@ -1,12 +1,12 @@
-(defproject puppetlabs/trapperkeeper-authorization "2.0.2-SNAPSHOT"
+(defproject org.openvoxproject/trapperkeeper-authorization "2.0.2-SNAPSHOT"
   :description "Trapperkeeper authorization system"
-  :url "http://github.com/puppetlabs/trapperkeeper-authorization"
+  :url "http://github.com/openvoxproject/trapperkeeper-authorization"
   :license {:name "Apache License, Version 2.0"
             :url "http://www.apache.org/licenses/LICENSE-2.0.html"}
 
   :min-lein-version "2.7.1"
 
-  :parent-project {:coords [puppetlabs/clj-parent "5.5.0"]
+  :parent-project {:coords [org.openvoxproject/clj-parent "7.5.1"]
                    :inherit [:managed-dependencies]}
 
   ;; Abort when version ranges or version conflicts are detected in
@@ -21,12 +21,12 @@
                  [prismatic/schema]
                  [ring/ring-codec]
 
-                 [puppetlabs/kitchensink]
-                 [puppetlabs/trapperkeeper]
-                 [puppetlabs/rbac-client]
-                 [puppetlabs/ring-middleware]
-                 [puppetlabs/ssl-utils]
-                 [puppetlabs/i18n]]
+                 [org.openvoxproject/kitchensink]
+                 [org.openvoxproject/trapperkeeper]
+                 [org.openvoxproject/rbac-client]
+                 [org.openvoxproject/ring-middleware]
+                 [org.openvoxproject/ssl-utils]
+                 [org.openvoxproject/i18n]]
 
   ;; By declaring a classifier here and a corresponding profile below we'll get an additional jar
   ;; during `lein jar` that has all the code in the test/ directory. Downstream projects can then
@@ -39,9 +39,9 @@
                               "-b" "./examples/ring_app/bootstrap.cfg"
                               "-c" "./examples/ring_app/ring-example.conf"]}
                    :source-paths ["examples/ring_app/src"]
-                   :dependencies [[puppetlabs/trapperkeeper-webserver-jetty9]
-                                  [puppetlabs/trapperkeeper nil :classifier "test" :scope "test"]
-                                  [puppetlabs/kitchensink nil :classifier "test" :scope "test"]
+                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10]
+                                  [org.openvoxproject/trapperkeeper nil :classifier "test" :scope "test"]
+                                  [org.openvoxproject/kitchensink nil :classifier "test" :scope "test"]
                                   [org.clojure/tools.namespace "1.4.1"]
                                   [org.bouncycastle/bcprov-jdk18on]
                                   [org.bouncycastle/bcpkix-jdk18on]
@@ -51,15 +51,14 @@
   ;; this plugin is used by jenkins jobs to interrogate the project version
   :plugins [[lein-parent "0.3.9"]
             [jonase/eastwood "1.2.2" :exclusions [org.clojure/clojure]]
-            [puppetlabs/i18n "0.9.2"]]
+            [org.openvoxproject/i18n "0.9.4"]]
 
   :lein-release        {:scm          :git
                         :deploy-via   :lein-deploy}
 
   :deploy-repositories [["releases" {:url "https://clojars.org/repo"
-                                     :username :env/clojars_jenkins_username
-                                     :password :env/clojars_jenkins_password
-                                     :sign-releases false}]
-                        ["snapshots" "http://nexus.delivery.puppetlabs.net/content/repositories/snapshots/"]]
+                                     :username :env/CLOJARS_USERNAME
+                                     :password :env/CLOJARS_PASSWORD
+                                     :sign-releases false}]]
 
   :main puppetlabs.trapperkeeper.main)

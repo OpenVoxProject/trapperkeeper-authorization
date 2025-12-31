@@ -1,9 +1,7 @@
 # Trapperkeeper Authorization Service
 
-[![Build Status](https://travis-ci.org/puppetlabs/trapperkeeper-authorization.svg?branch=master)](https://travis-ci.org/puppetlabs/trapperkeeper-authorization)
-
 This project provides an authorization service for use with the
-[trapperkeeper service framework](https://github.com/puppetlabs/trapperkeeper).
+[trapperkeeper service framework](https://github.com/openvoxproject/trapperkeeper).
 It aims to port Puppet's
 [`auth.conf`](https://docs.puppetlabs.com/puppet/latest/reference/config_file_auth.html)
 feature to Clojure and the trapperkeeper framework, with a different way to 
@@ -14,7 +12,7 @@ express authorization rules.
 To use this service in your trapperkeeper application, simply add this project
 as a dependency in your leiningen project file:
 
-[![Clojars Project](http://clojars.org/puppetlabs/trapperkeeper-authorization/latest-version.svg)](http://clojars.org/puppetlabs/trapperkeeper-authorization)
+[![Clojars Project](http://clojars.org/org.openvoxproject/trapperkeeper-authorization/latest-version.svg)](http://clojars.org/org.openvoxproject/trapperkeeper-authorization)
 
 Then add the authorization service to your
 [`bootstrap.cfg`](https://github.com/puppetlabs/trapperkeeper/wiki/Bootstrapping)
@@ -79,7 +77,7 @@ Here is an example of how a Trapperkeeper service can use the
 ~~~~
 
 See the
-[Trapperkeeper web service](https://github.com/puppetlabs/trapperkeeper-webserver-jetty9)
+[Trapperkeeper web service](https://github.com/openvoxproject/trapperkeeper-webserver-jetty10)
 project for more information on the `:WebserverService`.
 
 For this example, if the web server receives a request to the "/hello"
@@ -135,7 +133,7 @@ following key/value pairs:
   
 > **Note:** Apache's mod_proxy converts line breaks in PEM documents in HTTP
 headers to spaces for some reason and trapperkeeper-authorization can't URL
-decode the result.  We're tracking this issue as
+decode the result.  This issue was tracked as
 [SERVER-217](https://tickets.puppetlabs.com/browse/SERVER-217).
 
 ### `authorization-check`
@@ -157,15 +155,9 @@ The original work for this library, service, and the original REST authconfig
 work in Ruby Puppet were all contributed by [Brice Figureau](https://github
 .com/masterzen).  This project has been graciously transferred to Puppet Labs for
 further development and maintenance as it becomes a critical part of the
-[Puppet Server](https://github.com/puppetlabs/puppet-server) security model as
+[OpenVox Server](https://github.com/openvoxproject/openvox-server) security model as
 authconfig became a critical part of Puppet's security model.
 
 ## Support
 
-We use the
-[Trapperkeeper project on JIRA](https://tickets.puppetlabs.com/browse/TK) for
-tickets on the Trapperkeeper Authorization Service, although Github issues 
-are welcome too.  Please note that the best method to get our attention on an
-issue is via JIRA.
-
-Tickets: https://tickets.puppetlabs.com/browse/TK
+GitHub issues and PRs are welcome! Additionally, drop us a line in [the Vox Pupuli Slack](https://voxpupuli.org/connect/).
