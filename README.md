@@ -77,7 +77,7 @@ Here is an example of how a Trapperkeeper service can use the
 ~~~~
 
 See the
-[Trapperkeeper web service](https://github.com/openvoxproject/trapperkeeper-webserver-jetty9)
+[Trapperkeeper web service](https://github.com/openvoxproject/trapperkeeper-webserver-jetty10)
 project for more information on the `:WebserverService`.
 
 For this example, if the web server receives a request to the "/hello"

@@ -2,9 +2,9 @@
 
 This example demonstrates how to incorporate the trapperkeeper-authorization
 service into a simple Ring app.  This is based loosely upon the
-[ring_app example] (https://github.com/puppetlabs/trapperkeeper-webserver-jetty9/tree/master/examples/ring_app)
-in the trapperkeeper-webserver-jetty9 project.  See that example for more
-information on the use of the `jetty9-service` and the Jetty web server
+[ring_app example] (https://github.com/openvoxproject/trapperkeeper-webserver-jetty10/tree/master/examples/ring_app)
+in the trapperkeeper-webserver-jetty10 project.  See that example for more
+information on the use of the `jetty10-service` and the Jetty web server
 integration with Ring.
 
 This example includes a simple set of default authorization rules which can be
@@ -39,12 +39,12 @@ namespaces and service names. For this example, the bootstrap.cfg looks like
 this:
 
 ~~~~
-puppetlabs.trapperkeeper.services.webserver.jetty9-service/jetty9-service
+puppetlabs.trapperkeeper.services.webserver.jetty10-service/jetty10-service
 puppetlabs.trapperkeeper.services.authorization.authorization-service/authorization-service
 examples.ring-app.ring-app/hello-service
 ~~~~
 
-This configuration indicates that the jetty9 `WebserverService`, authorization
+This configuration indicates that the jetty10 `WebserverService`, authorization
 service, and new "hello" service, defined in the `ring_app.clj` file, are to be
 loaded.
 
