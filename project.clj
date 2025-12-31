@@ -6,7 +6,7 @@
 
   :min-lein-version "2.7.1"
 
-  :parent-project {:coords [org.openvoxproject/clj-parent "7.5.0"]
+  :parent-project {:coords [org.openvoxproject/clj-parent "7.5.1"]
                    :inherit [:managed-dependencies]}
 
   ;; Abort when version ranges or version conflicts are detected in
@@ -51,7 +51,7 @@
   ;; this plugin is used by jenkins jobs to interrogate the project version
   :plugins [[lein-parent "0.3.9"]
             [jonase/eastwood "1.2.2" :exclusions [org.clojure/clojure]]
-            [org.openvoxproject/i18n "0.9.3"]]
+            [org.openvoxproject/i18n "0.9.4"]]
 
   :lein-release        {:scm          :git
                         :deploy-via   :lein-deploy}
