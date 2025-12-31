@@ -1,4 +1,4 @@
-(defproject org.openvoxproject/trapperkeeper-authorization "2.0.2-SNAPSHOT"
+(defproject org.openvoxproject/trapperkeeper-authorization "2.0.2"
   :description "Trapperkeeper authorization system"
   :url "http://github.com/openvoxproject/trapperkeeper-authorization"
   :license {:name "Apache License, Version 2.0"
