@@ -133,7 +133,7 @@
       (testing "fails as expected when URL encoded properly but base64 content malformed"
         (is (thrown+? [:kind :bad-request
                        :msg (str "Unable to parse x-client-cert into "
-                                     "certificate: -----END CERTIFICATE not found")]
+                                     "certificate: -----END CERTIFICATE----- not found")]
                       (cert-from-request
                        "-----BEGIN%20CERTIFICATE-----%0AM"))))
       (testing "fails when cert not in the payload"
