@@ -24,6 +24,7 @@
                          [ring/ring-core "1.15.3"]
                          [ring/ring-codec "1.3.0"]
                          [commons-codec "1.20.0"]
+                         [cheshire "5.13.0"]
   
                          [org.openvoxproject/kitchensink ~kitchensink-version]
                          [org.openvoxproject/kitchensink ~kitchensink-version :classifier "test"]
@@ -61,7 +62,7 @@
                                   [org.clojure/tools.namespace "1.5.1"]
                                   [org.bouncycastle/bcprov-jdk18on "1.83"]
                                   [org.bouncycastle/bcpkix-jdk18on "1.83"]
-                                  [ring/ring-mock "0.4.0"]]}
+                                  [ring/ring-mock "0.6.2"]]}
              :testutils {:source-paths ^:replace ["test"]}}
 
   ;; this plugin is used by jenkins jobs to interrogate the project version
