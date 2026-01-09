@@ -24,6 +24,7 @@
                          [ring/ring-core "1.15.3"]
                          [ring/ring-codec "1.3.0"]
                          [commons-codec "1.20.0"]
+                         [cheshire "5.13.0"]
   
                          [org.openvoxproject/kitchensink ~kitchensink-version]
                          [org.openvoxproject/kitchensink ~kitchensink-version :classifier "test"]
