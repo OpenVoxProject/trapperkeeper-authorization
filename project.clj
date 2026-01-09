@@ -58,7 +58,7 @@
                    :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.0"]
                                   [org.openvoxproject/trapperkeeper :classifier "test" :scope "test"]
                                   [org.openvoxproject/kitchensink :classifier "test" :scope "test"]
-                                  [org.clojure/tools.namespace "1.4.1"]
+                                  [org.clojure/tools.namespace "1.5.1"]
                                   [org.bouncycastle/bcprov-jdk18on "1.83"]
                                   [org.bouncycastle/bcpkix-jdk18on "1.83"]
                                   [ring/ring-mock "0.4.0"]]}
