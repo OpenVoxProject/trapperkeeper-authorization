@@ -34,7 +34,7 @@
 
                  [org.clojure/tools.logging "1.2.4"]
                  [slingshot "0.12.2"]
-                 [prismatic/schema "1.1.12"]
+                 [prismatic/schema "1.4.1"]
                  [ring/ring-codec]
 
                  [org.openvoxproject/kitchensink]
