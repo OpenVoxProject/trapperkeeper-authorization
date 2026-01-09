@@ -32,7 +32,7 @@
 
   :dependencies [[org.clojure/clojure]
 
-                 [org.clojure/tools.logging "1.2.4"]
+                 [org.clojure/tools.logging "1.3.1"]
                  [slingshot "0.12.2"]
                  [prismatic/schema "1.4.1"]
                  [ring/ring-codec]
