@@ -23,7 +23,7 @@
 
                          [ring/ring-core "1.8.2"]
                          [ring/ring-codec "1.3.0"]
-                         [commons-codec "1.15"]
+                         [commons-codec "1.20.0"]
   
                          [org.openvoxproject/kitchensink ~kitchensink-version]
                          [org.openvoxproject/kitchensink ~kitchensink-version :classifier "test"]
