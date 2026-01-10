@@ -56,7 +56,7 @@
                               "-b" "./examples/ring_app/bootstrap.cfg"
                               "-c" "./examples/ring_app/ring-example.conf"]}
                    :source-paths ["examples/ring_app/src"]
-                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.0"]
+                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.2"]
                                   [org.openvoxproject/trapperkeeper :classifier "test" :scope "test"]
                                   [org.openvoxproject/kitchensink :classifier "test" :scope "test"]
                                   [org.clojure/tools.namespace "1.5.1"]
