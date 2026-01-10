@@ -40,7 +40,7 @@
 
                  [org.openvoxproject/kitchensink]
                  [org.openvoxproject/trapperkeeper]
-                 [org.openvoxproject/rbac-client "1.2.0"]
+                 [org.openvoxproject/rbac-client "1.2.1"]
                  [org.openvoxproject/ring-middleware "2.1.0"]
                  [org.openvoxproject/ssl-utils "3.6.2"]
                  [org.openvoxproject/i18n ~i18n-version]]
