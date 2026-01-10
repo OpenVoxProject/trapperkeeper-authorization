@@ -42,7 +42,7 @@
                  [org.openvoxproject/trapperkeeper]
                  [org.openvoxproject/rbac-client "1.2.0"]
                  [org.openvoxproject/ring-middleware "2.1.0"]
-                 [org.openvoxproject/ssl-utils "3.6.1"]
+                 [org.openvoxproject/ssl-utils "3.6.2"]
                  [org.openvoxproject/i18n ~i18n-version]]
 
   ;; By declaring a classifier here and a corresponding profile below we'll get an additional jar
