@@ -15,36 +15,44 @@
   ;; requires lein 2.2.0+.
   :pedantic? :abort
 
-  ;; These are to enforce consistent versions across dependencies of dependencies,
-  ;; and to avoid having to define versions in multiple places. If a component
-  ;; defined under :dependencies ends up causing an error due to :pedantic? :abort,
-  ;; because it is a dep of a dep with a different version, move it here.
+  ;; Generally, try to keep version pins in :managed-dependencies and the libraries
+  ;; this project actually uses in :dependencies, inheriting the version from
+  ;; :managed-dependencies. This prevents endless version conflicts due to deps of deps.
+  ;; Renovate should keep the versions largely in sync between projects.
   :managed-dependencies [[org.clojure/clojure "1.12.4"]
-
-                         [ring/ring-core "1.15.3"]
-                         [ring/ring-codec "1.3.0"]
+                         [org.clojure/tools.logging "1.3.1"]
+                         [org.clojure/tools.namespace "1.5.1"]
+                         [cheshire "5.13.0"]
                          [commons-codec "1.20.0"]
                          [commons-io "2.21.0"]
-                         [cheshire "5.13.0"]
-  
-                         [org.openvoxproject/kitchensink ~kitchensink-version]
-                         [org.openvoxproject/kitchensink ~kitchensink-version :classifier "test"]
-                         [org.openvoxproject/trapperkeeper ~trapperkeeper-version]
-                         [org.openvoxproject/trapperkeeper ~trapperkeeper-version :classifier "test"]]
+                         [org.bouncycastle/bcpkix-jdk18on "1.83"]
+                         [org.bouncycastle/bcprov-jdk18on "1.83"]
+                         [org.openvoxproject/i18n ~i18n-version]
+                         [org.openvoxproject/kitchensink "3.5.5"]
+                         [org.openvoxproject/kitchensink "3.5.5" :classifier "test"]
+                         [org.openvoxproject/rbac-client "1.2.2"]
+                         [org.openvoxproject/ring-middleware "2.1.2"]
+                         [org.openvoxproject/ssl-utils "3.6.2"]
+                         [org.openvoxproject/trapperkeeper "4.3.2"]
+                         [org.openvoxproject/trapperkeeper "4.3.2" :classifier "test"]
+                         [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.2"]
+                         [prismatic/schema "1.4.1"]
+                         [ring/ring-codec "1.3.0"]
+                         [ring/ring-core "1.15.3"]
+                         [ring/ring-mock "0.6.2"]
+                         [slingshot "0.12.2"]]
 
   :dependencies [[org.clojure/clojure]
-
-                 [org.clojure/tools.logging "1.3.1"]
-                 [slingshot "0.12.2"]
-                 [prismatic/schema "1.4.1"]
-                 [ring/ring-codec]
-
+                 [org.clojure/tools.logging]
+                 [org.openvoxproject/i18n]
                  [org.openvoxproject/kitchensink]
+                 [org.openvoxproject/rbac-client]
+                 [org.openvoxproject/ring-middleware]
+                 [org.openvoxproject/ssl-utils]
                  [org.openvoxproject/trapperkeeper]
-                 [org.openvoxproject/rbac-client "1.2.2"]
-                 [org.openvoxproject/ring-middleware "2.1.2"]
-                 [org.openvoxproject/ssl-utils "3.6.2"]
-                 [org.openvoxproject/i18n ~i18n-version]]
+                 [prismatic/schema]
+                 [ring/ring-codec]
+                 [slingshot]]
 
   ;; By declaring a classifier here and a corresponding profile below we'll get an additional jar
   ;; during `lein jar` that has all the code in the test/ directory. Downstream projects can then
@@ -57,13 +65,13 @@
                               "-b" "./examples/ring_app/bootstrap.cfg"
                               "-c" "./examples/ring_app/ring-example.conf"]}
                    :source-paths ["examples/ring_app/src"]
-                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.2"]
+                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10]
                                   [org.openvoxproject/trapperkeeper :classifier "test" :scope "test"]
                                   [org.openvoxproject/kitchensink :classifier "test" :scope "test"]
-                                  [org.clojure/tools.namespace "1.5.1"]
-                                  [org.bouncycastle/bcprov-jdk18on "1.83"]
-                                  [org.bouncycastle/bcpkix-jdk18on "1.83"]
-                                  [ring/ring-mock "0.6.2"]]}
+                                  [org.clojure/tools.namespace]
+                                  [org.bouncycastle/bcprov-jdk18on]
+                                  [org.bouncycastle/bcpkix-jdk18on]
+                                  [ring/ring-mock]]}
              :testutils {:source-paths ^:replace ["test"]}}
 
   ;; this plugin is used by jenkins jobs to interrogate the project version
