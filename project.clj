@@ -22,7 +22,7 @@
   :managed-dependencies [[org.clojure/clojure "1.12.4"]
                          [org.clojure/tools.logging "1.3.1"]
                          [org.clojure/tools.namespace "1.5.1"]
-                         [cheshire "5.13.0"]
+                         [cheshire "6.1.0"]
                          [commons-codec "1.20.0"]
                          [commons-io "2.21.0"]
                          [org.bouncycastle/bcpkix-jdk18on "1.83"]
