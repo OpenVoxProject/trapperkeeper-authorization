@@ -39,7 +39,7 @@
                          [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.3"]
                          [prismatic/schema "1.4.1"]
                          [ring/ring-codec "1.3.0"]
-                         [ring/ring-core "1.14.2"]
+                         [ring/ring-core "1.15.3"]
                          [ring/ring-mock "0.6.2"]
                          [slingshot "0.12.2"]]
 
