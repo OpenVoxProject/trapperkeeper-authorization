@@ -34,9 +34,9 @@
                          [org.openvoxproject/rbac-client "1.2.4"]
                          [org.openvoxproject/ring-middleware "2.1.4"]
                          [org.openvoxproject/ssl-utils "3.6.2"]
-                         [org.openvoxproject/trapperkeeper "4.3.2"]
-                         [org.openvoxproject/trapperkeeper "4.3.2" :classifier "test"]
-                         [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.4"]
+                         [org.openvoxproject/trapperkeeper "4.3.3-SNAPSHOT"]
+                         [org.openvoxproject/trapperkeeper "4.3.3-SNAPSHOT" :classifier "test"]
+                         [org.openvoxproject/trapperkeeper-webserver-jetty12 "1.0.0-SNAPSHOT"]
                          [prismatic/schema "1.4.1"]
                          [ring/ring-codec "1.3.0"]
                          [ring/ring-core "1.14.2"]
@@ -66,7 +66,7 @@
                               "-b" "./examples/ring_app/bootstrap.cfg"
                               "-c" "./examples/ring_app/ring-example.conf"]}
                    :source-paths ["examples/ring_app/src"]
-                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10]
+                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty12]
                                   [org.openvoxproject/trapperkeeper :classifier "test" :scope "test"]
                                   [org.openvoxproject/kitchensink :classifier "test" :scope "test"]
                                   [org.clojure/tools.namespace]
