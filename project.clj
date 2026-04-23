@@ -24,7 +24,7 @@
                          [org.clojure/tools.namespace "1.5.1"]
                          [cheshire "6.2.0"]
                          [commons-codec "1.21.0"]
-                         [commons-io "2.21.0"]
+                         [commons-io "2.22.0"]
                          [org.bouncycastle/bcpkix-jdk18on "1.84"]
                          [org.bouncycastle/bcprov-jdk18on "1.84"]
                          [org.openvoxproject/i18n ~i18n-version]
