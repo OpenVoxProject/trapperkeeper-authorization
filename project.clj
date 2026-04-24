@@ -2,7 +2,7 @@
 (def trapperkeeper-version "4.3.2")
 (def i18n-version "1.0.4")
 
-(defproject org.openvoxproject/trapperkeeper-authorization "2.1.9"
+(defproject org.openvoxproject/trapperkeeper-authorization "2.1.10-SNAPSHOT"
   :description "Trapperkeeper authorization system"
   :url "http://github.com/openvoxproject/trapperkeeper-authorization"
   :license {:name "Apache License, Version 2.0"
