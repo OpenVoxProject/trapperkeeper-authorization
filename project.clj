@@ -1,6 +1,6 @@
 (def kitchensink-version "3.5.5")
 (def trapperkeeper-version "4.3.2")
-(def i18n-version "1.0.3")
+(def i18n-version "1.0.4")
 
 (defproject org.openvoxproject/trapperkeeper-authorization "2.1.9-SNAPSHOT"
   :description "Trapperkeeper authorization system"
