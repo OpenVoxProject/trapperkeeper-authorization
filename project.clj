@@ -31,7 +31,7 @@
                          [org.openvoxproject/http-client "2.2.7"]
                          [org.openvoxproject/kitchensink "3.5.7"]
                          [org.openvoxproject/kitchensink "3.5.7" :classifier "test"]
-                         [org.openvoxproject/rbac-client "1.2.9"]
+                         [org.openvoxproject/rbac-client "1.2.10"]
                          [org.openvoxproject/ring-middleware "2.1.7"]
                          [org.openvoxproject/ssl-utils "3.6.4"]
                          [org.openvoxproject/trapperkeeper "4.3.5"]
