@@ -2,7 +2,7 @@
 (def trapperkeeper-version "4.3.2")
 (def i18n-version "1.0.4")
 
-(defproject org.openvoxproject/trapperkeeper-authorization "2.1.11-SNAPSHOT"
+(defproject org.openvoxproject/trapperkeeper-authorization "2.2.0-SNAPSHOT"
   :description "Trapperkeeper authorization system"
   :url "http://github.com/openvoxproject/trapperkeeper-authorization"
   :license {:name "Apache License, Version 2.0"
@@ -36,7 +36,7 @@
                          [org.openvoxproject/ssl-utils "3.6.4"]
                          [org.openvoxproject/trapperkeeper "4.3.5"]
                          [org.openvoxproject/trapperkeeper "4.3.5" :classifier "test"]
-                         [org.openvoxproject/trapperkeeper-webserver-jetty10 "1.1.8"]
+                         [org.openvoxproject/trapperkeeper-webserver "10.0.0"]
                          [prismatic/schema "1.4.1"]
                          [ring/ring-codec "1.3.0"]
                          [ring/ring-core "1.14.2"]
@@ -66,7 +66,7 @@
                               "-b" "./examples/ring_app/bootstrap.cfg"
                               "-c" "./examples/ring_app/ring-example.conf"]}
                    :source-paths ["examples/ring_app/src"]
-                   :dependencies [[org.openvoxproject/trapperkeeper-webserver-jetty10]
+                   :dependencies [[org.openvoxproject/trapperkeeper-webserver]
                                   [org.openvoxproject/trapperkeeper :classifier "test" :scope "test"]
                                   [org.openvoxproject/kitchensink :classifier "test" :scope "test"]
                                   [org.clojure/tools.namespace]

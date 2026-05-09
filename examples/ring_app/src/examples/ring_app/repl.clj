@@ -7,8 +7,8 @@
     [puppetlabs.trapperkeeper.core :as tk]
     [puppetlabs.trapperkeeper.services.authorization.authorization-service
      :refer [authorization-service]]
-    [puppetlabs.trapperkeeper.services.webserver.jetty10-service
-     :refer [jetty10-service]]))
+    [puppetlabs.trapperkeeper.services.webserver.jetty-service
+     :refer [jetty-service]]))
 
 ;; This namespace shows an example of the "reloaded" clojure workflow
 ;; ( http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded )
@@ -31,7 +31,7 @@
 (defn init []
   (alter-var-root #'system
                   (fn [_] (tk/build-app
-                           [jetty10-service
+                           [jetty-service
                             authorization-service
                             hello-service]
                            {:global
