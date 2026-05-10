@@ -32,7 +32,7 @@
                          [org.openvoxproject/kitchensink "3.5.7"]
                          [org.openvoxproject/kitchensink "3.5.7" :classifier "test"]
                          [org.openvoxproject/rbac-client "1.2.9"]
-                         [org.openvoxproject/ring-middleware "2.1.7"]
+                         [org.openvoxproject/ring-middleware "2.2.0"]
                          [org.openvoxproject/ssl-utils "3.6.4"]
                          [org.openvoxproject/trapperkeeper "4.3.5"]
                          [org.openvoxproject/trapperkeeper "4.3.5" :classifier "test"]
