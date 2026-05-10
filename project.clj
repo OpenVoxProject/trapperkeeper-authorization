@@ -28,7 +28,7 @@
                          [org.bouncycastle/bcpkix-jdk18on "1.84"]
                          [org.bouncycastle/bcprov-jdk18on "1.84"]
                          [org.openvoxproject/i18n ~i18n-version]
-                         [org.openvoxproject/http-client "2.2.7"]
+                         [org.openvoxproject/http-client "2.3.0"]
                          [org.openvoxproject/kitchensink "3.5.7"]
                          [org.openvoxproject/kitchensink "3.5.7" :classifier "test"]
                          [org.openvoxproject/rbac-client "1.2.9"]
