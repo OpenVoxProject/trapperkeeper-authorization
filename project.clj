@@ -2,7 +2,7 @@
 (def trapperkeeper-version "4.3.2")
 (def i18n-version "1.0.4")
 
-(defproject org.openvoxproject/trapperkeeper-authorization "2.2.1-SNAPSHOT"
+(defproject org.openvoxproject/trapperkeeper-authorization "2.3.0-SNAPSHOT"
   :description "Trapperkeeper authorization system"
   :url "http://github.com/openvoxproject/trapperkeeper-authorization"
   :license {:name "Apache License, Version 2.0"
@@ -28,15 +28,15 @@
                          [org.bouncycastle/bcpkix-jdk18on "1.84"]
                          [org.bouncycastle/bcprov-jdk18on "1.84"]
                          [org.openvoxproject/i18n ~i18n-version]
-                         [org.openvoxproject/http-client "2.2.7"]
+                         [org.openvoxproject/http-client "2.3.0"]
                          [org.openvoxproject/kitchensink "3.5.7"]
                          [org.openvoxproject/kitchensink "3.5.7" :classifier "test"]
                          [org.openvoxproject/rbac-client "1.2.9"]
-                         [org.openvoxproject/ring-middleware "2.1.7"]
+                         [org.openvoxproject/ring-middleware "2.2.0"]
                          [org.openvoxproject/ssl-utils "3.6.4"]
-                         [org.openvoxproject/trapperkeeper "4.3.5"]
-                         [org.openvoxproject/trapperkeeper "4.3.5" :classifier "test"]
-                         [org.openvoxproject/trapperkeeper-webserver "10.0.0"]
+                         [org.openvoxproject/trapperkeeper "5.0.0"]
+                         [org.openvoxproject/trapperkeeper "5.0.0" :classifier "test"]
+                         [org.openvoxproject/trapperkeeper-webserver "12.0.0"]
                          [prismatic/schema "1.4.1"]
                          [ring/ring-codec "1.3.0"]
                          [ring/ring-core "1.14.2"]
