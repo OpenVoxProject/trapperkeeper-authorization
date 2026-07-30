@@ -185,8 +185,9 @@
                                        :get "127.0.0.1"
                                        testutils/test-denied-cert))]
            (is (= 403 (:status response)))
-            (is  = (str "Forbidden request: /path/to/foo (method :get)."
-                       " Please see the server logs for details.")))))
+           (is (= (str "Forbidden request: /path/to/foo (method :get)."
+                       " Please see the server logs for details.")
+                  (:body response))))))
      (testing "access denied when deny all"
        (let [app (build-ring-handler [(-> (testutils/new-rule :path "/")
                                           (rules/deny {:certname "*"}))]

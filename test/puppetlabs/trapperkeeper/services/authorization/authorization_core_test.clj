@@ -107,6 +107,7 @@
     (is (thrown-with-msg?
           IllegalArgumentException
           #"An authorization rule should be specified as a map."
+          #_{:clj-kondo/ignore [:type-mismatch]}
           (validate-auth-config-rule! 0)))
 
     (is (thrown-with-msg?
