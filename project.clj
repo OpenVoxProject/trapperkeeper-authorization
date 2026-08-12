@@ -36,7 +36,7 @@
                          [org.openvoxproject/ssl-utils "3.7.1"]
                          [org.openvoxproject/trapperkeeper "5.0.5"]
                          [org.openvoxproject/trapperkeeper "5.0.5" :classifier "test"]
-                         [org.openvoxproject/trapperkeeper-webserver "12.1.0"]
+                         [org.openvoxproject/trapperkeeper-webserver "12.1.1"]
                          [prismatic/schema "1.4.2"]
                          [ring/ring-codec "1.3.0"]
                          [ring/ring-core "1.15.5"]
