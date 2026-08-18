@@ -26,7 +26,7 @@
                          [commons-codec "1.22.1"]
                          [commons-io "2.22.0"]
                          [org.bouncycastle/bcpkix-jdk18on "1.85"]
-                         [org.bouncycastle/bcprov-jdk18on "1.85"]
+                         [org.bouncycastle/bcprov-jdk18on "1.85.2"]
                          [org.openvoxproject/i18n ~i18n-version]
                          [org.openvoxproject/http-client "2.4.1"]
                          [org.openvoxproject/kitchensink "3.5.8"]
