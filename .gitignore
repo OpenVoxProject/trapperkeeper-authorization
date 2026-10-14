@@ -15,3 +15,7 @@ pom.xml.asc
 /dev-resources/i18n/bin
 .eastwood
 .clj-kondo/.cache
+/.bundle
+/.vendor
+/vendor
+/Gemfile.lock
