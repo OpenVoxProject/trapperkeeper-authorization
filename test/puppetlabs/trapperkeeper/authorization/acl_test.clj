@@ -58,7 +58,17 @@
 (deftest test-fqdn
   (testing "match a similar PQDN"
     (is (not (acl/match? (acl/new-domain :allow {:certname "spirit.mars.nasa.gov."}) {:certname "spirit.mars.nasa.gov"
-                                                                                      :extensions {}})))))
+                                                                                      :extensions {}}))))
+  (let [acl (acl/new-domain :allow {:certname "foo.test"})]
+    (testing "exact certname matches are allowed"
+      (is (acl/match? acl {:certname "foo.test" :extensions {}})))
+
+    (testing "subdomains don't match parents"
+      (is (not (acl/match? acl {:certname "child.foo.test" :extensions {}}))))
+    (testing "grandchildren don't match grandparent domain names"
+      (is (not (acl/match? acl {:certname "grand.child.foo.test" :extensions {}}))))
+    (testing "parent domain names don't match children"
+      (is (not (acl/match? acl {:certname "test" :extensions {}}))))))
 
 (deftest test-regex
   (let [acl (acl/new-domain :allow {:certname "/^(test-)?host[0-9]+\\.other-domain\\.(com|org|net)$|some-domain\\.com/"})]
@@ -112,8 +122,13 @@
 (deftest test-acl-certname-matching
   (let [acl (-> (acl/allow {:certname "*.domain.com"})
                 (acl/deny {:certname "*.test.org"}))]
-    (testing "allowing by name"
-      (is (acl/allowed? acl {:certname "test.domain.com" :extensions {}})))
+    (testing "allowing by subdomain name"
+      (is (acl/allowed? acl {:certname "test.domain.com" :extensions {}}))
+      (is (acl/allowed? acl {:certname "sub.test.domain.com" :extensions {}})))
+    (testing "allowing by domain name"
+      (is (acl/allowed? acl {:certname "domain.com" :extensions {}})))
+    (testing "denying by root domain"
+      (is (not (acl/allowed? acl {:certname "com" :extensions {}}))))
     (testing "denying by name"
       (is (not (acl/allowed? acl {:certname "www.test.org" :extensions {}}))))
     (testing "no match is deny"
