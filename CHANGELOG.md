@@ -1,3 +1,127 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [2.5.0](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.5.0) (2026-11-03)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.4.1...2.5.0)
+
+**Security fixes:**
+
+- Re-factor domain name matching [\#113](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/113) ([Sharpie](https://github.com/Sharpie))
+
+**Merged pull requests:**
+
+- Add the Prepare Release workflow [\#108](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/108) ([nmburgan](https://github.com/nmburgan))
+- Update minimum Leiningen version to 2.12.0 [\#97](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/97) ([corporate-gadfly](https://github.com/corporate-gadfly))
+
+## [2.4.1](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.4.1) (2026-08-11)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.4.0...2.4.1)
+
+**Merged pull requests:**
+
+- fix clj-kondo lint error/warning [\#88](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/88) ([corporate-gadfly](https://github.com/corporate-gadfly))
+
+## [2.4.0](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.4.0) (2026-07-20)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.3.0...2.4.0)
+
+**Merged pull requests:**
+
+- Bump version to 2.4.0-SNAPSHOT [\#85](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/85) ([Sharpie](https://github.com/Sharpie))
+
+## [2.3.0](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.3.0) (2026-05-11)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.2.0...2.3.0)
+
+**Merged pull requests:**
+
+- Update to jetty12 [\#39](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/39) ([austb](https://github.com/austb))
+
+## [2.2.0](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.2.0) (2026-05-09)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.10...2.2.0)
+
+**Merged pull requests:**
+
+- Migrate config to use trapperkeeper-webserver [\#67](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/67) ([nmburgan](https://github.com/nmburgan))
+
+## [2.1.10](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.10) (2026-04-25)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.9...2.1.10)
+
+## [2.1.9](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.9) (2026-04-24)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.8...2.1.9)
+
+**Implemented enhancements:**
+
+- org.openvoxproject/rbac-client: Update 1.2.8-\>1.2.9 [\#61](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/61) ([bastelfreak](https://github.com/bastelfreak))
+- CI: Add Java 25 support [\#53](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/53) ([bastelfreak](https://github.com/bastelfreak))
+
+## [2.1.8](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.8) (2026-04-19)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.7...2.1.8)
+
+## [2.1.7](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.7) (2026-04-13)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.6...2.1.7)
+
+## [2.1.6](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.6) (2026-01-21)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.5...2.1.6)
+
+**Merged pull requests:**
+
+- Downgrade ring-core version from 1.15.3 to 1.14.2 [\#32](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/32) ([nmburgan](https://github.com/nmburgan))
+
+## [2.1.5](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.5) (2026-01-12)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.4...2.1.5)
+
+**Merged pull requests:**
+
+- Add http-client to managed deps [\#30](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/30) ([nmburgan](https://github.com/nmburgan))
+- Move version pins [\#27](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/27) ([nmburgan](https://github.com/nmburgan))
+
+## [2.1.4](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.4) (2026-01-11)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.3...2.1.4)
+
+## [2.1.3](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.3) (2026-01-11)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.2...2.1.3)
+
+## [2.1.2](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.2) (2026-01-10)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.1...2.1.2)
+
+## [2.1.1](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.1) (2026-01-10)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.1.0...2.1.1)
+
+**Merged pull requests:**
+
+- CI: Add Vox Pupuli best practices [\#6](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/6) ([bastelfreak](https://github.com/bastelfreak))
+- Remove clj-parent [\#5](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/5) ([nmburgan](https://github.com/nmburgan))
+
+## [2.1.0](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.1.0) (2026-01-03)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.0.2...2.1.0)
+
+**Merged pull requests:**
+
+- Update clj-parent, eastwood, i18n [\#4](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/4) ([nmburgan](https://github.com/nmburgan))
+
+## [2.0.2](https://github.com/OpenVoxProject/trapperkeeper-authorization/tree/2.0.2) (2025-12-31)
+
+[Full Changelog](https://github.com/OpenVoxProject/trapperkeeper-authorization/compare/2.0.1...2.0.2)
+
+**Merged pull requests:**
+
+- CI and version: Changes for OpenVox namespacing [\#1](https://github.com/OpenVoxProject/trapperkeeper-authorization/pull/1) ([nmburgan](https://github.com/nmburgan))
+
 ### 2.0.1
   * Remove verbose warning for cert presence when proxying
 
@@ -114,3 +238,6 @@
 
  * Not released by PuppetLabs.  Code imported from the 0.0.1 tag on
    https://github.com/masterzen/trapperkeeper-authorization.
+
+
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
