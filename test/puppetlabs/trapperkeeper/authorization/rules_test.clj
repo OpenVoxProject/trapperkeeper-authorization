@@ -112,7 +112,15 @@
                          (rules/allow {:certname "*.domain.org"})
                          (rules/deny {:certname "deny.domain.org"}))]
         (is (acl/allowed? (:acl new-rule) {:certname "allow.domain.org" :extensions {}}))
-        (is (not (acl/allowed? (:acl new-rule) {:certname "deny.domain.org" :extensions {}})))))))
+        (is (not (acl/allowed? (:acl new-rule) {:certname "deny.domain.org" :extensions {}}))))))
+  (let [acl (-> (testutils/new-rule :regex "^/node/scoped/resource/([^/]+)$" :any)
+                (rules/allow {:certname "foo.test"}))]
+    (testing "exact certname matches are allowed"
+      (is (acl/allowed? (:acl acl) {:certname "foo.test" :extensions {}})))
+    (testing "subdomain names do not match parents"
+      (is (not (acl/allowed? (:acl acl) {:certname "child.foo.test" :extensions {}}))))
+    (testing "parent domain names do not match children"
+      (is (not (acl/allowed? (:acl acl) {:certname "test" :extensions {}}))))))
 
 (defn- build-rules
   "Build a list of rules from individual vectors of [path allow]"

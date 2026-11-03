@@ -79,7 +79,7 @@
 (def ACE
   "An authorization entry matching a network or a domain"
   {:auth-type AuthType
-   :match (schema/enum :string :regex :backreference :extensions :rbac-permission)
+   :match (schema/enum :string :wildcard :regex :backreference :extensions :rbac-permission)
    :value ACEValue})
 
 (def ACL
@@ -166,7 +166,7 @@
     (re-matches #"^\*(\.(\w[-\w]*)){1,}$" certname)
     (let [host_sans_star (vec (drop-last (split-domain certname)))]
       {:auth-type auth-type
-       :match :string
+       :match :wildcard
        :value host_sans_star})
 
     ; backreference
@@ -199,9 +199,10 @@
   [{:keys [value match]} :- ACE
    to-match :- schema/Str]
   (let [match-split-domain (split-domain to-match)]
-    (if (= :regex match)
-      (boolean (re-find (re-pattern value) to-match))
-      (every? (fn [[a b]] (= a b)) (map vector value match-split-domain)))))
+    (case match
+      :regex (boolean (re-find (re-pattern value) to-match))
+      :wildcard (= value (take (count value) match-split-domain))
+      (= value match-split-domain))))
 
 (schema/defn ^:private substitute-backreference :- schema/Str
   "substiture $1, $2... by the same index in the captures vector"
